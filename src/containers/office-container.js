@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
-import { stair, meetingRoom } from './shapes';
-import './Office.css';
-import HeaderContainer from './containers/header-container';
+import { stair, meetingRoom } from '../shapes';
+import HeaderContainer from './header-container';
+import { FaSignalSlash, FaSignal, FaPlug, FaQuestionCircle } from 'react-icons/fa';
 
 function Office() {
     const canvas = useRef(null);
@@ -26,6 +26,10 @@ function Office() {
         <div className="App">
             <HeaderContainer />
             <canvas ref={canvas} width="400" height="600" className="Office" />
+            <FaPlug />
+            <FaSignal />
+            <FaSignalSlash />
+            <FaQuestionCircle />
         </div>
     );
 }

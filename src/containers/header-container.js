@@ -1,25 +1,18 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
-import Form from 'react-bootstrap/Form';
-import FormControl from 'react-bootstrap/FormControl';
+import Nav from 'react-bootstrap/Nav';
+import { useSelector } from 'react-redux';
 import ConnectionStatus from '../components/connection-status';
 
 const HeaderContainer = props => {
-    // const state = useContext(State);
+    const socketStatus = useSelector(state => state.socketStatus);
+
     return (
         <Navbar expand="lg" variant="light" bg="light" fixed="top">
             <Navbar.Brand href="#">Meeting Room Availability Overview</Navbar.Brand>
-            {/* <Form inline>
-                <FormControl
-                    type="text"
-                    placeholder="Filter"
-                    className="mr-sm-2"
-                    value={state.filterValue}
-                    onChange={e => console.log(e.target.value)}
-                />
-            </Form> */}
+            <Nav className="mr-auto" />
             <Navbar.Text>
-                <ConnectionStatus connectionId="2" />
+                <ConnectionStatus connectionId={socketStatus} />
             </Navbar.Text>
         </Navbar>
     );
