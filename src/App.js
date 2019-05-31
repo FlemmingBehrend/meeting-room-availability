@@ -4,7 +4,7 @@ import './App.css';
 import HeaderContainer from './containers/header-container';
 import OfficeContainer from './containers/office-container';
 import Config from './context/config';
-import { updateSocketStatus } from './store/actions';
+import { updateSocketStatus, initRooms } from './store/actions';
 
 const App = () => {
     const dispatch = useDispatch();
@@ -24,6 +24,9 @@ const App = () => {
     config.socket.onmessage = event => {
         console.log('MESSAGE RECIEVED', event);
     };
+
+    dispatch(initRooms(config.rooms));
+
     return (
         <Fragment>
             <HeaderContainer />

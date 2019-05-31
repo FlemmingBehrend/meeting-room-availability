@@ -2,7 +2,8 @@ import { createStore } from 'redux';
 import rootReducer from './root-reducer';
 
 const initialState = {
-    socketStatus: 0
+    socketStatus: 0,
+    rooms: []
 };
 
 export default () => {
