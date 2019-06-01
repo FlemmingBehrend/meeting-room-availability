@@ -1,10 +1,6 @@
 import { createStore } from 'redux';
 import rootReducer from './root-reducer';
-
-const initialState = {
-    socketStatus: 0,
-    rooms: []
-};
+import { initialState } from './initial-state';
 
 export default () => {
     const store = createStore(

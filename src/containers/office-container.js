@@ -1,6 +1,5 @@
 import React, { useRef, useEffect } from 'react';
 import { stair, meetingRoom } from '../shapes';
-import HeaderContainer from './header-container';
 import { useSelector } from 'react-redux';
 
 function Office() {
@@ -22,9 +21,9 @@ function Office() {
     useEffect(() => {
         const context = canvas.current.getContext('2d');
         console.log('drawing rooms');
-        rooms.forEach(room => {
-            meetingRoom(context, room.placement, room.name, room.availability);
-        });
+        for (const room of rooms) {
+            meetingRoom(context, room.placement, room.name, room.availability, room.lastUpdatedTime);
+        }
     }, [rooms]);
 
     return (

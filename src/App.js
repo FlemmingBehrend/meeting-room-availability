@@ -4,7 +4,7 @@ import './App.css';
 import HeaderContainer from './containers/header-container';
 import OfficeContainer from './containers/office-container';
 import Config from './context/config';
-import { updateSocketStatus, initRooms } from './store/actions';
+import { updateSocketStatus, updateRoom } from './store/actions';
 
 const App = () => {
     const dispatch = useDispatch();
@@ -22,10 +22,10 @@ const App = () => {
     };
 
     config.socket.onmessage = event => {
-        console.log('MESSAGE RECIEVED', event);
+        const message = JSON.parse(event.data);
+        console.log('MESSAGE RECIEVED', message);
+        dispatch(updateRoom(message));
     };
-
-    dispatch(initRooms(config.rooms));
 
     return (
         <Fragment>
