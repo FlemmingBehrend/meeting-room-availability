@@ -1,4 +1,5 @@
 import m from 'moment';
+import 'moment/locale/da';
 
 export const UNKNOWN = 0;
 export const OCCUPIED = 1;
@@ -14,6 +15,7 @@ function stair(context, startPoint) {
 }
 
 function meetingRoom(context, startPoint, name, available, updatedTime) {
+    context.clearRect(startPoint.x, startPoint.y, 70, 60);
     context.fillStyle = 'lightgray';
     context.fillRect(startPoint.x, startPoint.y, 70, 30);
     if (available === 2) {

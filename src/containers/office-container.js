@@ -7,10 +7,10 @@ function Office() {
     const rooms = useSelector(state => state.rooms);
 
     useEffect(() => {
+        console.log('drawing office');
         const context = canvas.current.getContext('2d');
         context.strokeStyle = 'black';
         context.strokeRect(0, 10, 400, 580);
-        console.log('drawing office');
         stair(context, { x: 20, y: 50 });
         stair(context, { x: 20, y: 150 });
         stair(context, { x: 20, y: 250 });
