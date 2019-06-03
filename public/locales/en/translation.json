@@ -1,0 +1,10 @@
+{
+    "title": "Meeting Room Availability Overview",
+    "connection": {
+        "closing": "The websocket connection in closing down",
+        "closed": "The websocket connection have disconnected",
+        "connecting": "The websocket is connecting...",
+        "open": "The websocket connection is open",
+        "unknown": "The status of the websocket connection is unknown"
+    }
+}

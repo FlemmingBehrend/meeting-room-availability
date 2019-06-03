@@ -1,0 +1,10 @@
+{
+    "title": "Møderum Tilgængeligheds Overblik",
+    "connection": {
+        "closing": "Websocket forbindelsen lukkes ned",
+        "closed": "Websocket forbindelsen er blevet lukket",
+        "connecting": "Websoket forbinder...",
+        "open": "Websocket forbindelsen er forbundet",
+        "unknown": "Status for websocket forbindelsen er ikke kendt"
+    }
+}

@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import ReconnectingWebSocket from 'reconnecting-websocket';
 import createStore from './store';
 import './index.css';
+import './i18n';
 import App from './App';
 import Config from './context/config';
 import * as serviceWorker from './serviceWorker';

@@ -1,4 +1,4 @@
-import React, { Fragment, useContext } from 'react';
+import React, { Fragment, useContext, Suspense } from 'react';
 import { useDispatch } from 'react-redux';
 import './App.css';
 import HeaderContainer from './containers/header-container';
@@ -7,6 +7,7 @@ import Config from './context/config';
 import { updateSocketStatus, updateRoom } from './store/actions';
 
 const App = () => {
+    console.log('Starting app...');
     const dispatch = useDispatch();
     const config = useContext(Config);
 
@@ -29,8 +30,10 @@ const App = () => {
 
     return (
         <Fragment>
-            <HeaderContainer />
-            <OfficeContainer />
+            <Suspense fallback="Loading...">
+                <HeaderContainer />
+                <OfficeContainer />
+            </Suspense>
         </Fragment>
     );
 };
