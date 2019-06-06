@@ -14,10 +14,29 @@ function stair(context, startPoint) {
     context.stroke();
 }
 
-function meetingRoom(context, startPoint, name, available, updatedTime) {
-    context.clearRect(startPoint.x, startPoint.y, 70, 60);
-    context.fillStyle = 'lightgray';
-    context.fillRect(startPoint.x, startPoint.y, 70, 30);
+function meetingRoom(context, startPoint, name, size, available, updatedTime) {
+    let height, width, xText, yText;
+    switch (size) {
+        case 4:
+            height = 25;
+            width = 25;
+            xText = 8;
+            yText = 18;
+            break;
+        case 6:
+            height = 28;
+            width = 25;
+            xText = 8;
+            yText = 20;
+            break;
+        case 10:
+            height = 35;
+            width = 25;
+            xText = 4;
+            yText = 22;
+            break;
+    }
+    context.clearRect(startPoint.x, startPoint.y, width, height);
     if (available === 2) {
         context.fillStyle = 'green';
     } else if (available === 1) {
@@ -25,14 +44,10 @@ function meetingRoom(context, startPoint, name, available, updatedTime) {
     } else {
         context.fillStyle = 'gray';
     }
-    context.fillRect(startPoint.x + 15, startPoint.y + 10, 40, 10);
+    context.fillRect(startPoint.x, startPoint.y, width, height);
     context.fillStyle = 'black';
-    context.font = '12px Sanf Sarif';
-    context.fillText(name, startPoint.x, startPoint.y + 40);
-    const time = m(updatedTime)
-        .locale('da')
-        .format('LTS');
-    context.fillText(time, startPoint.x, startPoint.y + 50);
+    context.font = '14px Sanf Sarif';
+    context.fillText(size, startPoint.x + xText, startPoint.y + yText);
 }
 
 export { stair, meetingRoom };

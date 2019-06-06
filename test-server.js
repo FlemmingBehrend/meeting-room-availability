@@ -30,7 +30,41 @@ wsServer.on('request', request => {
         clients.splice(index, 1);
     });
 
-    const rooms = ['Bilskade', 'Ulykke', 'Uheld', 'Rørskade'];
+    const rooms = [
+        'Forurening',
+        'Brud',
+        'Klemt',
+        'Byggefejl',
+        'Driftstab',
+        'Snetryk',
+        'Markbrand',
+        'Kolik',
+        'Havari',
+        'Påkørsel',
+        'Sygdom',
+        'Brand',
+        'Uheld',
+        'Storm',
+        'Kollision',
+        'Ulykke',
+        'Skybrud',
+        'Indbrud',
+        'Hærværk',
+        'Strømsvigt',
+        'Lynnedslag',
+        'Fugt',
+        'Utæthed',
+        'Tøbrud',
+        'Bilskade',
+        'Motorstop',
+        'Byggesjusk',
+        'Nedbrud',
+        'Tyveri',
+        'Smerte',
+        'Stenslag',
+        'Fald',
+        'Konflikt'
+    ];
 
     setInterval(() => {
         connection.sendUTF(
@@ -40,5 +74,5 @@ wsServer.on('request', request => {
                 availability: Math.floor(Math.random() * 2 + 1)
             })
         );
-    }, 5000);
+    }, 3000);
 });
