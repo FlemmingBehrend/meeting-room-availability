@@ -6,5 +6,10 @@
         "connecting": "Websoket forbinder...",
         "open": "Websocket forbindelsen er forbundet",
         "unknown": "Status for websocket forbindelsen er ikke kendt"
+    },
+    "language": {
+        "danish": "Skift sprog til dansk",
+        "english": "Skift sprog til engelsk",
+        "select": "Vælg sprog"
     }
 }

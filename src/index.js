@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import ReconnectingWebSocket from 'reconnecting-websocket';
 import createStore from './store';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'flag-icon-css/css/flag-icon.min.css';
 import './index.css';
 import './i18n';
 import App from './App';

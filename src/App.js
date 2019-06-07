@@ -1,4 +1,4 @@
-import React, { Fragment, useContext, Suspense } from 'react';
+import React, { useContext, Suspense } from 'react';
 import { useDispatch } from 'react-redux';
 import './App.css';
 import HeaderContainer from './containers/header-container';
@@ -29,12 +29,12 @@ const App = () => {
     };
 
     return (
-        <Fragment>
+        <div className="container-fluid">
             <Suspense fallback="Loading...">
                 <HeaderContainer />
                 <OfficeContainer />
             </Suspense>
-        </Fragment>
+        </div>
     );
 };
 

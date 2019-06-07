@@ -6,5 +6,10 @@
         "connecting": "The websocket is connecting...",
         "open": "The websocket connection is open",
         "unknown": "The status of the websocket connection is unknown"
+    },
+    "language": {
+        "danish": "Change language to danish",
+        "english": "Change language to english",
+        "select": "Choose language"
     }
 }

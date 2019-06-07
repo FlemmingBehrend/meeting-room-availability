@@ -10,14 +10,6 @@ function Office() {
     useEffect(() => {
         console.log('drawing office');
         const context = canvas.current.getContext('2d');
-        // context.strokeStyle = 'black';
-        // context.strokeRect(0, 10, 400, 580);
-        // stair(context, { x: 20, y: 50 });
-        // stair(context, { x: 20, y: 150 });
-        // stair(context, { x: 20, y: 250 });
-        // stair(context, { x: 20, y: 350 });
-        // stair(context, { x: 20, y: 450 });
-        // console.log('OfficeImage', OfficeImage());
         const officeImageObj = new Image();
         officeImageObj.src = OfficeImage;
         officeImageObj.onload = () => context.drawImage(officeImageObj, 0, 0);
