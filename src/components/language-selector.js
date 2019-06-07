@@ -15,13 +15,13 @@ const LanguageSelector = props => {
     }, [language, i18n]);
 
     return (
-        <div className={'btn-group'} role="group" aria-label={t('language.select')}>
+        <div className={'btn-group'} role="group" aria-label={t('language.aria.select')}>
             <button
                 ref={dkButton}
                 type="button"
                 data-toggle="tooltip"
                 data-placement="bottom"
-                title={t('language.danish')}
+                title={t('language.tooltip.danish')}
                 onClick={() => setLanguage('dk')}
             >
                 <span className="flag-icon flag-icon-dk" />
@@ -31,7 +31,7 @@ const LanguageSelector = props => {
                 type="button"
                 data-toggle="tooltip"
                 data-placement="bottom"
-                title={t('language.english')}
+                title={t('language.tooltip.english')}
                 onClick={() => setLanguage('en')}
             >
                 <span className="flag-icon flag-icon-gb" />

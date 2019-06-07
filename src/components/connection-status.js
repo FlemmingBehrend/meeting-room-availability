@@ -8,32 +8,32 @@ const ConnectionStatus = props => {
     switch (props.connectionId) {
         case WebSocket.CLOSING:
             return (
-                <span style={{ fontSize: '1em', color: 'Orange' }} title={t('connection.closing')}>
+                <span style={{ fontSize: '1em', color: 'Orange' }} title={t('connection.tooltip.closing')}>
                     <FaSignalSlash />
                 </span>
             );
         case WebSocket.CLOSED:
             return (
-                <span style={{ fontSize: '1em', color: 'Red' }} title={t('connection.closed')}>
+                <span style={{ fontSize: '1em', color: 'Red' }} title={t('connection.tooltip.closed')}>
                     <FaSignalSlash />
                 </span>
             );
         case WebSocket.CONNECTING:
             return (
-                <span style={{ fontSize: '1em', color: 'Blue' }} title={t('connection.connecting')}>
+                <span style={{ fontSize: '1em', color: 'Blue' }} title={t('connection.tooltip.connecting')}>
                     <FaPlug />
                 </span>
             );
         case WebSocket.OPEN:
             return (
-                <span style={{ fontSize: '1em', color: 'Green' }} title={t('connection.open')}>
+                <span style={{ fontSize: '1em', color: 'Green' }} title={t('connection.tooltip.open')}>
                     <FaSignal />
                 </span>
             );
         default:
             return (
                 <span style={{ fontSize: '1em', color: 'Gray' }}>
-                    <FaQuestionCircle title={t('connection.unknown')} />
+                    <FaQuestionCircle title={t('connection.tooltip.unknown')} />
                 </span>
             );
     }

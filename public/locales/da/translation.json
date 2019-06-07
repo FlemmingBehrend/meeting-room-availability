@@ -1,15 +1,26 @@
 {
     "title": "Møderum Tilgængeligheds Overblik",
     "connection": {
-        "closing": "Websocket forbindelsen lukkes ned",
-        "closed": "Websocket forbindelsen er blevet lukket",
-        "connecting": "Websoket forbinder...",
-        "open": "Websocket forbindelsen er forbundet",
-        "unknown": "Status for websocket forbindelsen er ikke kendt"
+        "tooltip": {
+            "closing": "Websocket forbindelsen lukkes ned",
+            "closed": "Websocket forbindelsen er blevet lukket",
+            "connecting": "Websoket forbinder...",
+            "open": "Websocket forbindelsen er forbundet",
+            "unknown": "Status for websocket forbindelsen er ikke kendt"
+        }
     },
     "language": {
-        "danish": "Skift sprog til dansk",
-        "english": "Skift sprog til engelsk",
-        "select": "Vælg sprog"
+        "tooltip": {
+            "danish": "Skift sprog til dansk",
+            "english": "Skift sprog til engelsk"
+        },
+        "aria": {
+            "select": "Vælg sprog"
+        }
+    },
+    "rooms": {
+        "label": {
+            "available": "Antal ledige rum"
+        }
     }
 }
