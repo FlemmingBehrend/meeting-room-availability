@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 
-const LanguageSelector = props => {
+const LanguageSelector = () => {
     const { t, i18n } = useTranslation();
     const [language, setLanguage] = useState('dk');
     const dkButton = useRef(null);

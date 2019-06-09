@@ -1,20 +1,8 @@
-import m from 'moment';
-import 'moment/locale/da';
-
 export const UNKNOWN = 0;
 export const OCCUPIED = 1;
 export const AVAILABLE = 2;
 
-function stair(context, startPoint) {
-    context.fillStyle = 'lightgray';
-    context.fillRect(startPoint.x, startPoint.y, 30, 50);
-    context.moveTo(startPoint.x + 15, startPoint.y + 20);
-    context.lineTo(startPoint.x + 15, startPoint.y + 50);
-    context.lineWidth = 1;
-    context.stroke();
-}
-
-function meetingRoom(context, startPoint, name, size, available, updatedTime) {
+function meetingRoom(context, startPoint, size, available) {
     let height, width, xText, yText;
     switch (size) {
         case 4:
@@ -50,4 +38,4 @@ function meetingRoom(context, startPoint, name, size, available, updatedTime) {
     context.fillText(size, startPoint.x + xText, startPoint.y + yText);
 }
 
-export { stair, meetingRoom };
+export { meetingRoom };

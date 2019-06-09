@@ -13,7 +13,7 @@ const HeaderContainer = props => {
     return (
         <nav className="navbar navbar-light bg-light">
             <div className="d-flex h5 mb-0 align-items-center">
-                <img src={MeetingRoomIcon} width="40" height="40" />
+                <img src={MeetingRoomIcon} width="40" height="40" alt="time" />
                 <span className="ml-1">{t('title')}</span>
             </div>
             <div className="d-flex flex-nowrap align-items-center">

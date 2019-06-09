@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 
-const AvailableRooms = props => {
+const AvailableRooms = () => {
     const { t } = useTranslation();
     const available = useSelector(state => state.rooms.filter(room => room.availability === 2).length);
 
