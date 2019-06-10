@@ -23,6 +23,9 @@ function meetingRoom(context, startPoint, size, available) {
             xText = 4;
             yText = 22;
             break;
+        default:
+            console.log('Unsupported room size: ', size);
+            break;
     }
     context.clearRect(startPoint.x, startPoint.y, width, height);
     if (available === 2) {

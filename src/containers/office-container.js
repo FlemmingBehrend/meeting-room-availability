@@ -3,6 +3,7 @@ import { meetingRoom } from '../shapes';
 import { useSelector } from 'react-redux';
 import OfficeImage from './../assets/landskab.jpg';
 import Clock from './../components/clock';
+import RoomList from '../components/list-rooms';
 
 function Office() {
     const canvas = useRef(null);
@@ -28,7 +29,12 @@ function Office() {
         <div className="App">
             <canvas ref={canvas} width="1506" height="542" className="Office" />
             <div>
-                <Clock />
+                <div>
+                    <Clock />
+                </div>
+                <div>
+                    <RoomList />
+                </div>
             </div>
         </div>
     );
