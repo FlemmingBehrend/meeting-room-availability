@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 
-const Clock = () => {
+export default function Clock() {
     const cc = useRef(null);
 
     useEffect(() => {
@@ -85,6 +85,4 @@ const Clock = () => {
     }, []);
 
     return <canvas ref={cc} width="200" height="200" />;
-};
-
-export default Clock;
+}

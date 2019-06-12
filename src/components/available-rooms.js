@@ -1,16 +1,9 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
-import { useSelector } from 'react-redux';
 
-const AvailableRooms = () => {
-    const { t } = useTranslation();
-    const available = useSelector(state => state.rooms.filter(room => room.availability === 2).length);
-
+export default function AvailableRooms({ available, label }) {
     return (
         <div>
-            {t('rooms.label.available')}: {available}
+            {label}: {available}
         </div>
     );
-};
-
-export default AvailableRooms;
+}

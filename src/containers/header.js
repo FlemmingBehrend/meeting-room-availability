@@ -3,11 +3,12 @@ import { useSelector } from 'react-redux';
 import ConnectionStatus from '../components/connection-status';
 import { useTranslation } from 'react-i18next';
 import LanguageSelector from '../components/language-selector';
-import AvailableRooms from './../components/available-rooms';
+import AvailableRooms from '../components/available-rooms';
 import MeetingRoomIcon from './../assets/meeting-room-icon.png';
 
-const HeaderContainer = props => {
+export default function HeaderContainer() {
     const socketStatus = useSelector(state => state.socketStatus);
+    const available = useSelector(state => state.rooms.filter(room => room.availability === 2).length);
     const { t } = useTranslation();
 
     return (
@@ -17,7 +18,7 @@ const HeaderContainer = props => {
                 <span className="ml-1">{t('title')}</span>
             </div>
             <div className="d-flex flex-nowrap align-items-center">
-                <AvailableRooms className="mx-auto" />
+                <AvailableRooms available={available} label={t('rooms.label.available')} />
                 <span className="ml-3 mr-3">
                     <LanguageSelector />
                 </span>
@@ -27,6 +28,4 @@ const HeaderContainer = props => {
             </div>
         </nav>
     );
-};
-
-export default HeaderContainer;
+}

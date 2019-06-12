@@ -3,11 +3,11 @@ body {
     background-size: cover;
 }
 
-.App {
+.center {
     text-align: center;
 }
 
-.Office {
+.office {
     margin-top: 30px;
     border: 4px solid;
     border-color: antiquewhite;
