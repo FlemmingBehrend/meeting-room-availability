@@ -22,5 +22,13 @@
         "label": {
             "available": "Antal ledige rum"
         }
+    },
+    "table": {
+        "header": {
+            "room_name": "Navn",
+            "updated": "Sidste registreret bevægelse",
+            "module": "Modul",
+            "size": "Størrelse"
+        }
     }
 }

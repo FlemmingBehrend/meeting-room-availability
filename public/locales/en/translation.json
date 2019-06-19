@@ -22,5 +22,13 @@
         "label": {
             "available": "Number of available rooms"
         }
+    },
+    "table": {
+        "header": {
+            "room_name": "Room name",
+            "updated": "Last registrered movement",
+            "module": "Module",
+            "size": "Room size"
+        }
     }
 }

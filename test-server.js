@@ -70,7 +70,7 @@ wsServer.on('request', request => {
         connection.sendUTF(
             JSON.stringify({
                 name: rooms[Math.floor(Math.random() * rooms.length)],
-                time: new Date(),
+                time: new Date().toJSON(),
                 availability: Math.floor(Math.random() * 2 + 1)
             })
         );

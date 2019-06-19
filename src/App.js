@@ -31,20 +31,14 @@ const App = () => {
         <Suspense fallback="Loading...">
             <div className="container-fluid">
                 <div className="row">
-                    <div className="col">
-                        <HeaderContainer />
-                    </div>
+                    <div className="col">{/* <HeaderContainer /> */}</div>
                 </div>
                 <div className="row">
-                    <div className="col center">
-                        <OfficeContainer />
-                    </div>
+                    <div className="col center">{/* <OfficeContainer /> */}</div>
                 </div>
                 <div className="row">
                     <div className="col" />
-                    <div className="w-200">
-                        <ClockContainer />
-                    </div>
+                    <div className="w-200">{/* <ClockContainer /> */}</div>
                     <div className="col-auto">
                         <RoomListContainer />
                     </div>

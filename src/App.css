@@ -1,5 +1,5 @@
 body {
-    background-image: url('./assets/bg1.jpg');
+    /* background-image: url('./assets/bg1.jpg'); */
     background-size: cover;
 }
 
@@ -20,4 +20,8 @@ body {
 
 button[disabled] {
     border: 0px;
+}
+
+.td {
+    background-color: blue;
 }

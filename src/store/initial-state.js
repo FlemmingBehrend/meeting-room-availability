@@ -1,5 +1,6 @@
 export const initialState = {
     socketStatus: 0,
+    secondsBeforeRoomIsAvailable: 10,
     rooms: [
         { placement: { x: 33, y: 202 }, name: 'Forurening', size: 6, availability: 0, modul: 1 },
         { placement: { x: 33, y: 265 }, name: 'Brud', size: 6, availability: 0, modul: 1 },
